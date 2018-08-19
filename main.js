@@ -13,10 +13,11 @@ function setup() {
 class Bar {
   constructor(position) {
     this.position = position;
+    this.maxHeight = random(100);
   }
 
   render() {
-    let h = map(sin(frameCount / 50), -1, 1, 100, -100);
+    let h = map(sin(frameCount / 50), -1, 1, -this.maxHeight, this.maxHeight);
     fill(255);
     rect(this.position, 0, barWidth, h);
   }
