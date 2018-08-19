@@ -14,6 +14,10 @@ class Bar {
   constructor(position) {
     this.position = position;
     this.maxHeight = random(100) + 10;
+    this.setColor();
+  }
+
+  setColor() {
     this.color = color(random(255), random(255), random(255));
   }
 
@@ -22,6 +26,10 @@ class Bar {
         this.maxHeight);
     fill(this.color);
     rect(this.position, 0, barWidth, h);
+
+    if (abs(h) < 1) {
+      this.setColor();
+    }
   }
 }
 
