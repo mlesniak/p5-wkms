@@ -1,1 +1,6 @@
-console.log('Hello, wkms');
+function setup() {
+  createCanvas(400, 400);
+  background(0);
+}
+
+
