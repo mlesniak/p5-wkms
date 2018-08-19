@@ -1,18 +1,26 @@
+let bars = [];
+let barWidth = 10;
+
 function setup() {
   createCanvas(400, 400);
+
+  for (let i = -width / 2; i < width / 2; i += barWidth) {
+    bars.push(new Bar(i));
+  }
 
 }
 
 class Bar {
+  constructor(position) {
+    this.position = position;
+  }
+
   render() {
     let h = map(sin(frameCount / 50), -1, 1, 100, -100);
     fill(255);
-    rect(0, 0, 10, h);
+    rect(this.position, 0, barWidth, h);
   }
 }
-
-let bars = [];
-bars.push(new Bar());
 
 function draw() {
   translate(width / 2, height / 2);
