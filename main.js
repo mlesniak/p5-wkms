@@ -9,5 +9,7 @@ function draw() {
 
   background(0);
   fill(255);
-  rect(0, 0, 10, 10);
+
+  let h = map(sin(frameCount / 50), -1, 1, 100, -100);
+  rect(0, 0, 10, h);
 }
