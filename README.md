@@ -1,6 +1,6 @@
 # Overview
 
-Minimal p5.js example for WebMonday Kassel.
+Minimal [p5.js](https://p5js.org) example for WebMonday Kassel.
 
 # Start with
 
