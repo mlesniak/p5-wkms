@@ -14,12 +14,13 @@ class Bar {
   constructor(position) {
     this.position = position;
     this.maxHeight = random(100) + 10;
+    this.color = color(random(255), random(255), random(255));
   }
 
   render() {
     let h = map(sin(frameCount / 50 + this.position), -1, 1, -this.maxHeight,
         this.maxHeight);
-    fill(255);
+    fill(this.color);
     rect(this.position, 0, barWidth, h);
   }
 }
